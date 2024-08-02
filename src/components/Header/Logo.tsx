@@ -1,8 +1,6 @@
 
 import './Logo.css';
 import React from 'react'
-import { remToPx } from '@/utils/remtoPX';
-import Image from 'next/image';
 
 interface Props {
    textCol?: string

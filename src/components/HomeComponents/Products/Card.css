@@ -10,7 +10,7 @@
    flex-direction: column;
 }
 
-.image .img {
+.image img {
    border-radius: 2rem;
    width: 100%;
 }

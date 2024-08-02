@@ -31,7 +31,7 @@ const Form: React.FC = () => {
       e.preventDefault()
       setLoading(true)
       try {
-         const response = axios.post(`/api/form`, JSON.stringify(data))
+         const response = axios.post('/api/form', JSON.stringify(data))
          console.log(response)
          toast.promise(
             response,
@@ -67,7 +67,7 @@ const Form: React.FC = () => {
    return (
       <div id="FormDetail">
          <div className="contact-headings-form ">
-            <h1 className='font-semibold'>Let's Talk !</h1>
+            <h1 className="font-semibold">Let&apos;s Talk !</h1>
             <p>Get in touch with us using the enquiry form or contact details below</p>
          </div>
 

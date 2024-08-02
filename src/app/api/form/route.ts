@@ -6,10 +6,10 @@ import { FormData } from "@/utils/types";
 import Form from "@/model/formModel";
 import ApiResponse from "@/utils/Api";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest){
    try {
       await dbConnect()
-      const formData: FormData =  await req.json();
+      const formData: FormData = await req.json();
       for (const i in formData) {
          const value = formData[i as keyof FormData]
          if (typeof value === 'string' && value.trim().length === 0) throw new ApiError(400, 'Required fields are missing')
@@ -26,6 +26,6 @@ export async function POST(req: NextRequest) {
       await data.save();
       return ApiResponse(200, 'Thank you for your submission')
    } catch (error: any) {
-      return new ApiError(error.statusCode || 500, error.message || 'Failed to Send')
+      throw new ApiError(error.statusCode || 500, error.message || 'Failed to Send')
    }
 }
