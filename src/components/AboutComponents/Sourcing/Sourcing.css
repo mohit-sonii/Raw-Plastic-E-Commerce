@@ -1,0 +1,22 @@
+
+.sourcing{
+     background-position: center center;
+     background-repeat: no-repeat;
+     margin-top: 3rem;
+     background-size: cover;
+     min-height: 40vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+
+.sourcing .sourcing-p{
+     font-size: 2rem;
+     width: 80%;
+     color: white;
+     margin: 2rem;
+     line-height: 45px;
+     font-weight: 200;
+     text-align: center;
+}

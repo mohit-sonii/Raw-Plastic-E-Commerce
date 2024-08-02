@@ -1,0 +1,24 @@
+#excellence {
+   width: 100%;
+   background-image: url("/stoneWallpaper.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-position: center center;
+}
+
+#excellence .excellenceText {
+   border: 1rem solid red;
+   display: flex;
+}
+
+#excel {
+   color: #FFF;
+   font-family: "Raleway", sans-serif;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 155%;
+   /* 155% */
+}

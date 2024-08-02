@@ -1,0 +1,35 @@
+#main {
+   width: 100%;
+   margin: auto;
+   gap: 2rem;
+   display: flex;
+   flex-direction: column;
+}
+
+#Info {
+   width: 90%;
+   margin: auto;
+   z-index: 10;
+   margin-top: -10rem;
+   background-color: white;
+}
+
+#products {
+   width: 90%;
+   margin: auto;
+   margin-top: 5rem;
+}
+
+#qualities {
+   width: 90%;
+   margin: auto;
+   margin-top: 8rem;
+}
+
+#cta {
+   width: 90%;
+   margin: auto;
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+}
+

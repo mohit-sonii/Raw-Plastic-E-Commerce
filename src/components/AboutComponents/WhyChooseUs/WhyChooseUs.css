@@ -1,0 +1,43 @@
+#whyContainer {
+     width: 90%;
+     margin: auto;
+     justify-content: center;
+}
+
+#whyContainer #WhyHeading h1 {
+     font-size: 4rem;
+}
+
+#whyContainer #WhyHeading img {
+     height: 1rem !important;
+     margin-top: 0 !important;
+     border-radius: 5rem;
+}
+
+.redline1 {
+     width: 2rem;
+}
+
+.redline2 {
+     width: 3rem;
+}
+
+.redline3 {
+     width: 4rem;
+}
+
+.redline4 {
+     width: 5rem;
+}
+
+#WhyHeading {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+}
+
+.redlines {
+     display: flex;
+     gap: 1rem;
+     justify-self: flex-end;
+}

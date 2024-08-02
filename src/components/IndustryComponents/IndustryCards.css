@@ -1,0 +1,46 @@
+#IndustriesKeCard {
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   margin-top: 3rem;
+   gap: 5rem;
+   /* overflow: hidden; */
+   border-radius: 2rem;
+}
+
+#IndustriesKeCard .text {
+   font-weight: 700;
+   display: flex;
+   justify-content: center;
+   font-size: 4rem;
+}
+
+#IndustriesKeCard .industry-image {
+   height: 50vh;
+   background-repeat: no-repeat;
+   background-position: center center;
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-size: cover;
+}
+
+.disabled {
+   opacity: 0 !important;
+}
+
+#IndustriesKeCard .industry-image .industry-p {
+   font-weight: 300;
+   width: 80%;
+   display: flex;
+   color: white;
+   margin: auto;
+   transition: opacity 0.2s ease-in-out;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   line-height: 50px;
+}

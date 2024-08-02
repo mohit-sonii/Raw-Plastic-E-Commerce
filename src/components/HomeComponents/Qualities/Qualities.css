@@ -1,0 +1,14 @@
+
+
+.qualities-section{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 5rem;
+}
+
+@media only screen and (max-width:900px){
+     .qualities-section{
+          justify-content: center;
+     }
+}

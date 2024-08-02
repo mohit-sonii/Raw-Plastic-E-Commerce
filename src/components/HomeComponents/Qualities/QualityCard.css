@@ -1,0 +1,52 @@
+.qualityBoxes {
+   width: 32rem;
+   display: flex;
+   justify-content: center;
+   padding: 5rem 0;
+   align-items: center;
+}
+
+.first-box {
+   width: 11rem;
+   height: 10rem;
+   border: 1px solid black;
+   z-index: 1;
+}
+
+.second-box {
+   width: 11rem;
+   height: 10rem;
+   background-color: #3d3e3e;
+   display: flex;
+   justify-content: center;
+   translate: 10px -10px;
+   z-index: 2;
+   align-items: center;
+}
+
+.first-box .second-box img {
+   width: 5rem;
+   height: 5rem;
+   display: flex;
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+}
+
+.content-box {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-family: "Raleway", sans-serif;
+   gap: 2.4rem;
+}
+
+.content-box .content-box-h2 {
+   font-size: 2.5rem;
+   font-weight: 700;
+}
+
+.content-box .content-box-p {
+   font-size: 1.5rem;
+   font-weight: 400;
+}

@@ -1,0 +1,31 @@
+#cta-section {
+   display: flex;
+   justify-content:
+      center;
+   align-items: center;
+   margin: auto;
+   width: 100%;
+}
+
+#cta-section .text-section {
+   justify-content: center;
+   height: 100%;
+   align-items: center;
+   display: flex;
+   background-color: #1d1d11;
+}
+
+.for-CTA {
+   font-weight: 500;
+   font-family: "Raleway", sans-serif;
+   line-height: normal;
+   text-align: center;
+   color: white;
+}
+
+#cta-section .button-section {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

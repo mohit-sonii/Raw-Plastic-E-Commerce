@@ -1,0 +1,17 @@
+#container .image-container-product {
+   width: 100%;
+   background-size: cover;
+   display: flex;
+   position: relative;
+   top: -3.5rem;
+   justify-content: center;
+   align-items: center;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+
+#container .image-container-product .heading-product {
+   font-weight: 700;
+   font-family: "Raleway", sans-serif;
+   color: white;
+}

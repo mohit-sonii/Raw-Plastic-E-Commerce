@@ -1,0 +1,51 @@
+.htmlSize {
+   font-size: 62.5%;
+}
+
+.bodySize {
+   font-size: 100%;
+}
+
+#footer {
+   width: 100%;
+   margin-top: 5rem;
+}
+
+.appContainer {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   overflow-x: hidden;
+}
+
+#header {
+   width: 95%;
+   margin: auto;
+   margin-bottom: 3rem;
+}
+
+.layoutDiv {
+   opacity: 0;
+   animation: fadeInUp 1s forwards;
+}
+
+.navigation {
+   z-index: 1;
+   display: flex;
+   justify-content: flex-end;
+   margin: auto;
+   width: 100%;
+}
+
+
+@keyframes fadeInUp {
+   0% {
+      opacity: 0;
+      transform: translateY(50px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}

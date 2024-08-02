@@ -1,0 +1,17 @@
+#productCategory {
+     width: 100%;
+     margin-top: 10rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 50vh;
+     background-position: center center;
+     background-repeat: no-repeat;
+}
+
+#productCategory .category-product {
+
+     font-size: 5.5rem;
+     font-weight: 700;
+     color: white;
+}

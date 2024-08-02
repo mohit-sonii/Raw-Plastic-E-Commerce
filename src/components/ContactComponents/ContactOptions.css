@@ -1,0 +1,79 @@
+.contact-section {
+     display: flex;
+     width: 85%;
+     justify-content: space-between;
+     gap: 2rem;
+}
+
+
+.contact-section .call,
+.contact-section .mail,
+.contact-section .address {
+     display: flex;
+     width: 350px;
+     gap: 2rem;
+}
+
+.call-icon,
+.mail-icon,
+.add-icon {
+     background-color: red;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: background-color 0.2s ease-in-out;
+     width: 40px;
+     height: 40px;
+}
+
+.call-icon:hover,
+.mail-icon:hover,
+.add-icon:hover {
+     background-color: #212021;
+}
+
+.Address,
+.Mail,
+.Phone {
+     font-weight: 700;
+     font-size: 2.5rem;
+     color: #212020;
+}
+
+.call-text,
+.mail-text,
+.add-text {
+     display: flex;
+     gap: 1rem;
+     width: max-content;
+     flex-direction: column;
+}
+
+.phone-numbers,
+.tradeMail,
+.UAEadd {
+     font-size: 1.5rem;
+     font-weight: 400;
+}
+
+
+.address .add-text {
+     width: 80%;
+}
+
+
+/* @media only screen and (max-width:900px) {
+     .contact-section {
+          gap: 4rem;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .contact-section * {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+     }
+
+} */

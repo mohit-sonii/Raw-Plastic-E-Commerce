@@ -1,0 +1,15 @@
+#ContactOptions,
+#form {
+   display: flex;
+   margin: auto;
+   width: 100%;
+   margin-top: 5rem;
+   overflow: visible;
+   margin-bottom: 10rem;
+   /* margin: 5rem auto; */
+}
+
+#ContactOptions {
+   justify-content: center;
+}
+

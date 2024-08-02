@@ -1,0 +1,16 @@
+
+#HeaderStyles{
+     display: flex;
+     margin-top: 3rem;
+     justify-content:space-between ;
+     align-items: center;
+     width: 100%;
+     gap:2rem;
+}
+#HeaderStyles .tele-mess{
+     display: flex;
+     gap: 2rem;
+     /* justify-content: center; */
+     /* align-items: center; */
+}
+

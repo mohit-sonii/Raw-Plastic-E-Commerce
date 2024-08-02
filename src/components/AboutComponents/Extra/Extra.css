@@ -1,0 +1,32 @@
+
+#adv{
+     display: flex;
+     gap: 2rem;
+     /* width: 50%; */
+     /* width: max-content; */
+}
+#adv .icon{
+     width:50px;
+     display: flex;
+     justify-content: center;
+     border-radius: 0.5rem;
+     background-color: red;
+     align-items: center;
+     height:50px;
+}
+
+#adv .text{
+     display: flex;
+     width: 350px;
+     gap:1rem;
+     flex-direction: column;
+}
+#adv .text .quality{
+     font-size: 2.4rem;
+     font-weight: 700;
+}
+#adv .text .desc{
+     font-size: 1.5rem;
+     line-height: 30px;
+     font-weight: 400;
+}

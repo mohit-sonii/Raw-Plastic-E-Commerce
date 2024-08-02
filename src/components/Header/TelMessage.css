@@ -1,0 +1,16 @@
+.telephone-message {
+   display: flex;
+}
+
+.icon-text {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.icon-text p {
+   color: #1D1D1D;
+   font-size: 1.4rem;
+   font-weight: 400;
+   font-family: "Poppins", sans-serif;
+}

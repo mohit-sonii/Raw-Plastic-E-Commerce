@@ -1,0 +1,59 @@
+.image-container {
+   width: 100%;
+   height: 90vh;
+   position: relative;
+   display: flex;
+}
+
+.image-container::before {
+   width: 100%;
+   content: '';
+   background-image: url("/Picture4.png");
+   height: 100%;
+   background-size: cover;
+   display: flex;
+   position: absolute;
+   filter: brightness(50%);
+   top: -3.5rem;
+   justify-content: flex-start;
+   align-items: center;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+
+
+.image-headings {
+   width: 90%;
+   z-index: 2;
+   gap: 3rem;
+   position: relative;
+   margin: auto;
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.image-headings .heading {
+   font-family: "Raleway", sans-serif;
+   width: 70%;
+   line-height: normal;
+   color: white;
+}
+
+.image-headings .subheading {
+   width: 55%;
+   font-family: "Open Sans", sans-serif;
+   line-height: normal;
+
+   color: white;
+}
+
+
+
+.button {
+   display: flex;
+   justify-content: flex-start;
+   margin: 5rem auto;
+   width: 100%;
+}

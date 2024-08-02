@@ -1,0 +1,13 @@
+.VirginInfo,
+.RecycleInfo {
+   margin-top: -5rem !important;
+}
+
+#CardsForVirgin,
+#CardsForRecycle {
+   width: 90%;
+   margin: auto;
+   display: flex;
+   margin-bottom: 4rem;
+
+}
