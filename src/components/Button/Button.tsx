@@ -13,7 +13,7 @@ const Button: React.FC<Props> = ({ destination, text, btnColor }) => {
    return (
       <>
          <Link href={destination}>
-            <button style={{ backgroundColor: `${btnColor}` }}>
+            <button style={{ backgroundColor: `${btnColor}` }} className='flex jusitfy-center items-center text-'>
                {text}
             </button>
          </Link>

@@ -1,21 +1,13 @@
 
-
-
-import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
 import { Toaster } from 'react-hot-toast';
+import { Raleway } from 'next/font/google';
 import Header from "@/components/Header/Header";
 import "./globals.css";
 import styles from "./layout.module.css"
 import Footer from "@/components/Footer/Footer";
 import NavBar from "@/components/NavBar/NavBar";
 
-const inter = Raleway({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-   title: "Commerce Harbor FZE",
-   description: "",
-};
+const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
 
 export default function RootLayout({
    children,
@@ -25,7 +17,7 @@ export default function RootLayout({
    return (
       <html lang="en" className={styles.htmlSize}>
          <link rel="icon" type="image/png" href="/Logo.png" />
-         <body className={`${inter.className} ${styles.bodySize}`}>
+         <body className={`${raleway.className} ${styles.bodySize}`}>
          <Toaster
             reverseOrder={false}
             toastOptions={{

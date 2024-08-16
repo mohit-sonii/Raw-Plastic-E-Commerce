@@ -13,7 +13,7 @@ const Header: React.FC = () => {
          </div>
          <div className="tele-mess">
             <TelMessage value="+971 111 222 333 (UAE)" icon={<BsTelephone size={15} color="red" />} />
-            <TelMessage value="trade@Comharbor.com" icon={<CiMail size={15} color="red" />} />
+            <TelMessage value="trade@abc.com" icon={<CiMail size={15} color="red" />} />
          </div>
       </div>
    )

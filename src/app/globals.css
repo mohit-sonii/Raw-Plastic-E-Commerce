@@ -7,4 +7,5 @@
 * {
    box-sizing: border-box;
    flex-wrap: wrap;
+   line-height: normal;
 }

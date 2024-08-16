@@ -25,7 +25,7 @@ const ContactCard: React.FC = () => {
                   <div className="mailInfo">
                      <TelMessage textCol="white" icon={<CiMail size={20} color="red" />} />
                      <p className="mail-p">
-                        trade@Comharbor.com
+                        trade@abc.com
                      </p>
                   </div>
                   <div className="location">

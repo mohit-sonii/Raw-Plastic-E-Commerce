@@ -23,33 +23,8 @@
 
 
 .image-headings {
-   width: 90%;
    z-index: 2;
-   gap: 3rem;
-   position: relative;
-   margin: auto;
-   display: flex;
-   justify-content: flex-start;
-   flex-direction: column;
-   align-items: flex-start;
 }
-
-.image-headings .heading {
-   font-family: "Raleway", sans-serif;
-   width: 70%;
-   line-height: normal;
-   color: white;
-}
-
-.image-headings .subheading {
-   width: 55%;
-   font-family: "Open Sans", sans-serif;
-   line-height: normal;
-
-   color: white;
-}
-
-
 
 .button {
    display: flex;

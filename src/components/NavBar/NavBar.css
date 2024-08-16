@@ -1,60 +1,45 @@
-.nav-links{
-     color: #e7e7e7;
-     font-size: 1.6rem;
-     font-weight: 700;
-     text-decoration: none;
-     display: flex;
-     font-family: "Raleway", sans-serif;
-     cursor: pointer;
-     position: relative;
-     transition: all 0.2s ease-in;
+.nav-links {
+   color: #e7e7e7;
+   text-decoration: none;
+   display: flex;
+   cursor: pointer;
+   position: relative;
+   transition: all 0.2s ease-in;
 }
 
-.nav-links::after{
-     content: '';
-     width: 0;
-     transition: all 0.4s ease-in-out;
-     height: 2px;
-     background-color: #fff;
-     position: absolute;
-     border-radius: 2px;
-     left: 0;
-     bottom: -6px;
-}
-.nav-links:hover::after{
-     width: 100%;
+.nav-links::after {
+   content: '';
+   width: 0;
+   transition: all 0.4s ease-in-out;
+   height: 2px;
+   background-color: #fff;
+   position: absolute;
+   border-radius: 2px;
+   left: 0;
+   bottom: -6px;
 }
 
-.nav-links:hover{
-     color: white;
+.nav-links:hover::after {
+   width: 100%;
+}
+
+.nav-links:hover {
+   color: white;
 }
 
 
 nav ul li {
-     list-style-type: none;
+   list-style-type: none;
 }
+
 nav ul li:hover {
-     color: white;
+   color: white;
 }
 
-nav ul li .orange{
-     color: orange;
+nav ul li .orange {
+   color: orange;
 }
 
-nav {
-     display: flex;     
-     width: 100%;
-     justify-content: flex-end;
-     flex-wrap: wrap;
-     margin: auto;
-}
-
-
-nav ul {
-     display: flex;
-     gap: 3rem;
-     background-color: red;
-     padding: 2rem;
-     width: max-content;
-     
+nav ul{
+   background-color: red;
 }

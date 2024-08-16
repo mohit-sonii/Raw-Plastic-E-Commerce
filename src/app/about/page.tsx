@@ -6,6 +6,12 @@ import ISO from "@/components/AboutComponents/ISO/ISO"
 import WhyChooseUs from "@/components/AboutComponents/WhyChooseUs/WhyChooseUs"
 import LandingPage from "@/components/productsComponents/landingPage/LandingPage"
 import Info from "@/components/HomeComponents/Info/Info"
+import { Metadata } from "next"
+
+export const metadata:Metadata ={
+   title:'| About US',
+   description:'About Us'
+}
 
 
 const AboutUs: React.FC = () => {

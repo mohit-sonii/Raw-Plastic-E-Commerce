@@ -3,6 +3,13 @@ import "./page.css"
 import LandingPage from '@/components/productsComponents/landingPage/LandingPage'
 import Info from '@/components/HomeComponents/Info/Info'
 import IndustryCards from '@/components/IndustryComponents/IndustryCards'
+import { Metadata } from 'next'
+
+export const metadata:Metadata={
+   title:'| Industries',
+   description:'Industries page'
+}
+
 const Industries: React.FC = () => {
 
    return (

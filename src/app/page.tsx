@@ -7,9 +7,14 @@ import OurMission from '@/components/HomeComponents/OurMission/OurMission'
 import Qualities from '@/components/HomeComponents/Qualities/Qualities'
 import Excellence from '@/components/HomeComponents/Excellence/Excellence'
 import CTA from '@/components/HomeComponents/CTA/CTA'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+   title: "Commerce Harbor FZE",
+   description: "website landing page",
+};
 
 const Home: React.FC = () => {
-
    return (
       <div id="main">
          <LandingPage />
