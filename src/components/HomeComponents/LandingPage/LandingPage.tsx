@@ -1,5 +1,5 @@
 import React from 'react'
-import './LandingPagej.css'
+import './LandingPage.css'
 import Button from '@/components/Button/Button'
 
 
