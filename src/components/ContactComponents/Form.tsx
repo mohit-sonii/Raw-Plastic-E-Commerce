@@ -1,97 +1,125 @@
+"use client";
 
-
-"use client"
-
-import { useState } from 'react'
-import "./Form.css"
-import toast from 'react-hot-toast';
-import axios from 'axios'
-import React from 'react'
-
+import { useState, useEffect } from "react";
+import "./Form.css";
+import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+import React from "react";
+import {z}from 'zod'
+import { FormValidation } from "./zodValidation";
 
 interface FormData {
-   name: string,
-   email: string,
-   contact: string
-   message: string
-   subject: string
+  name: string;
+  email: string;
+  contact: string;
+  message: string;
+  subject: string;
 }
 
 const Form: React.FC = () => {
-   const [data, setData] = useState<FormData>({
-      name: '',
-      email: '',
-      contact: '',
-      message: '',
-      subject: ''
-   })
-   const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<z.infer<typeof FormValidation>>({
+    resolver: zodResolver(FormValidation),
+  });
 
-   const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault()
-      setLoading(true)
-      try {
-         const response = axios.post('/api/form', JSON.stringify(data))
-         console.log(response)
-         toast.promise(
-            response,
-            {
-               loading: 'Saving...',
-               success: <b>Thanks for the Submission!!!</b>,
-               error: (error: any) => <b>{error.message}</b>
-            }
-         );
-         await response
-
-         setData({
-            name: '',
-            email: '',
-            contact: '',
-            message: '',
-            subject: ''
-         })
-
-      } catch (err: any) {
-         console.log(err)
-      } finally {
-         setLoading(false);
+  const submission = handleSubmit(async (data: FormData) => {
+    setLoading(true);
+    const toastLoading = toast.loading("Please Wait...");
+    try {
+      const response = await axios.post("/api/form", JSON.stringify(data));
+      if (response.data) {
+        toast.success("Thank you for contacting us!!!");
       }
-   }
+      reset();
+    } catch (err: any) {
+      toast.error(err?.message || "Something Went Wrong !!!");
+    } finally {
+      setLoading(false);
+      toast.dismiss(toastLoading);
+    }
+  });
 
+  useEffect(() => {
+    if (Object.keys(errors).length > 0) {
+      for (const field in errors) {
+        const err = errors[field as keyof typeof errors];
+        if (err?.message) {
+          toast.error(`${field.toUpperCase()}: ${err.message}`);
+        }
+      }
+    }
+  }, [errors]);
 
-   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-      const { name, value } = e.currentTarget
-      setData({ ...data, [name]: value })
-   }
-
-   return (
-      <div id="FormDetail">
-         <div className="contact-headings-form ">
-            <h1 className="font-semibold">Let&apos;s Talk !</h1>
-            <p>Get in touch with us using the enquiry form or contact details below</p>
-         </div>
-
-         <div id="FormDesign" style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '20px' }}>
-            <form onSubmit={handleSubmit}>
-
-               <input name='name' value={data.name} onChange={handleChange} type="text" placeholder='Your Name ' required className='w-full' />
-
-               <input name='contact' value={data.contact} onChange={handleChange} type="tel" placeholder='Contact No. ' required className='w-full' />
-
-               <input name='email' value={data.email} onChange={handleChange} type="email" placeholder='Your Email ' required className='w-full' />
-
-               <input name='subject' value={data.subject} onChange={handleChange} type="text" placeholder='Subject ' required className='w-full' />
-
-               <input name='message' value={data.message} onChange={handleChange} type="text" placeholder='Your Message ' className='textarea w-full' required />
-
-               <div className="formButton" >
-                  <button type="submit" style={{ backgroundColor: 'red' }}>{loading ? 'Loading...' : 'Submit'}
-                  </button>
-               </div>
-            </form>
-         </div>
+  return (
+    <div id="FormDetail">
+      <div className="contact-headings-form ">
+        <h1 className="font-semibold">Let&apos;s Talk !</h1>
+        <p>
+          Get in touch with us using the enquiry form or contact details below
+        </p>
       </div>
-   )
-}
 
-export default Form
+      <div
+        id="FormDesign"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px",
+          marginBottom: "20px",
+        }}
+      >
+        <form onSubmit={submission}>
+          <input
+            {...register("name")}
+            placeholder="Your Name "
+            required
+            className="w-full"
+          />
+
+          <input
+            {...register("contact")}
+            placeholder="Contact No. "
+            required
+            className="w-full"
+          />
+
+          <input
+            {...register("email")}
+            placeholder="Your Email "
+            required
+            className="w-full"
+          />
+
+          <input
+            {...register("subject")}
+            placeholder="Subject "
+            required
+            className="w-full"
+          />
+
+          <input
+            {...register("message")}
+            placeholder="Your Message "
+            className="textarea w-full"
+            required
+          />
+
+          <div className="formButton">
+            <button type="submit" style={{ backgroundColor: "red" }}>
+              {loading ? "Loading..." : "Submit"}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Form;

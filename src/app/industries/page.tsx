@@ -6,7 +6,7 @@ import IndustryCards from '@/components/IndustryComponents/IndustryCards'
 import { Metadata } from 'next'
 
 export const metadata:Metadata={
-   title:'| Industries',
+   title:'Industries',
    description:'Industries page'
 }
 

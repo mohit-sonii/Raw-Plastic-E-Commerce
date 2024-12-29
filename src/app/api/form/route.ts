@@ -1,31 +1,40 @@
+import prisma from "@/lib/db";
 
-import dbConnect from "@/lib/dbConnect";
-import { ApiError } from "next/dist/server/api-utils";
-import { NextRequest } from "next/server";
-import { FormData } from "@/utils/types";
-import Form from "@/model/formModel";
-import ApiResponse from "@/utils/Api";
+export async function POST(req: Request) {
+  try {
+    const { name, message, subject, contact, email } = await req.json();
 
-export async function POST(req: NextRequest){
-   try {
-      await dbConnect()
-      const formData: FormData = await req.json();
-      for (const i in formData) {
-         const value = formData[i as keyof FormData]
-         if (typeof value === 'string' && value.trim().length === 0) throw new ApiError(400, 'Required fields are missing')
-      }
-      const alreadySubmitted = await Form.findOne({ email: formData.email })
-      if (alreadySubmitted) throw new ApiError(400, 'User already submitted the form')
-      const data = new Form({
-         name: formData.name,
-         email: formData.email,
-         message: formData.message,
-         subject: formData.subject,
-         contact: formData.contact,
+    const alreadySubmitted = await prisma.form.findFirst({
+      where: {
+        email,
+      },
+    });
+    if (alreadySubmitted)
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "User already submitted the form !!!",
+        })
+      );
+
+    await prisma.form.create({
+      data: {
+        name,
+        email,
+        contact,
+        subject,
+        message,
+      },
+    });
+    return new Response(
+      JSON.stringify({
+        success: true,
+        message: "Thank you for your submission !!!",
       })
-      await data.save();
-      return ApiResponse(200, 'Thank you for your submission')
-   } catch (error: any) {
-      throw new ApiError(error.statusCode || 500, error.message || 'Failed to Send')
-   }
+    );
+  } catch (err) {
+    return new Response(
+      JSON.stringify({ success: false, message: "Something went wrong !!!" })
+    );
+  }
 }

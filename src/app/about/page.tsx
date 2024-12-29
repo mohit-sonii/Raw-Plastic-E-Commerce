@@ -9,7 +9,7 @@ import Info from "@/components/HomeComponents/Info/Info"
 import { Metadata } from "next"
 
 export const metadata:Metadata ={
-   title:'| About US',
+   title:'About US',
    description:'About Us'
 }
 

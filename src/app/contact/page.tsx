@@ -6,14 +6,13 @@ import Form from '@/components/ContactComponents/Form'
 import { Metadata } from 'next'
 
 export const metadata: Metadata={
-   title:'| Contact Us',
+   title:'Contact Us',
    description:'Contact us'
 }
 
 const ContactUs: React.FC = () => {
    return (
       <>
-
          <LandingPage
             title={"CONTACT US"}
             image={"/Contact.png"}
