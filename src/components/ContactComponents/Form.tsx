@@ -34,8 +34,10 @@ const Form: React.FC = () => {
     const toastLoading = toast.loading("Please Wait...");
     try {
       const response = await axios.post("/api/form", JSON.stringify(data));
-      if (response.data) {
-        toast.success("Thank you for contacting us!!!");
+      if(response.data.success){
+         toast.success(response.data.message)
+      }else{
+         toast.error(response.data.message)
       }
       reset();
     } catch (err: any) {

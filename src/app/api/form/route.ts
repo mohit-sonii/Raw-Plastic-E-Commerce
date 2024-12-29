@@ -15,7 +15,7 @@ export async function POST(req: Request) {
         email:email
       },
     });
-    if (alreadySubmitted)
+    if (alreadySubmitted!=null)
       return new Response(
         JSON.stringify({
           success: false,
