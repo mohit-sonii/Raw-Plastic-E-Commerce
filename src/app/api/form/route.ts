@@ -2,11 +2,17 @@ import prisma from "@/lib/db";
 
 export async function POST(req: Request) {
   try {
-    const { name, message, subject, contact, email } = await req.json();
+     const { name, message, subject, contact, email }: {
+        name: string,
+        message: string,
+        subject: string,
+        contact: string,
+        email:string
+    } = await req.json();
 
-    const alreadySubmitted = await prisma.form.findFirst({
+    const alreadySubmitted = await prisma.form.findUnique({
       where: {
-        email,
+        email:email
       },
     });
     if (alreadySubmitted)
